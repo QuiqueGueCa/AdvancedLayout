@@ -33,7 +33,7 @@
             android:id="@+id/tvleftParagraph"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="AAAAAA asdfsdk kjkjk lk klkjl ljkj lkjlkj lkkj lkj uy iuy iuy i iuy  fgfdfdsf sdfdsfsdfdd dfdsfkjjlkj kljljkj"
+            tools:text="AAAAAA asdfsdk kjkjk lk klkjl ljkj lkjlkj lkkj lkj uy iuy iuy i iuy  fgfdfdsf sdfdsfsdfdd dfdsfkjjlkj kljljkj"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@id/tvTitle"
@@ -43,7 +43,7 @@
             android:id="@+id/tvRightParagraph"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="asdasdsa asd kklj lkasd adad asdas jlk"
+            tools:text="asdasdsa asd kklj lkasd adad asdas jlk"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toRightOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@id/tvTitle"
@@ -84,11 +84,10 @@
             android:id="@+id/viewPager"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            tools:listitem="@layout/item_user"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/linearLayout"/>
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

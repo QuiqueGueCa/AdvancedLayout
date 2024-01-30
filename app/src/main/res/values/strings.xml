@@ -2,4 +2,8 @@
     <string name="app_name">AdvancedLayout</string>
     <string name="title">Título</string>
     <string name="imgExplanation">Imagen de laberinto</string>
+    <string name="age">Edad:</string>
+    <string name="sex">Sexo:</string>
+    <string name="hobbies">Hobbies:</string>
+    <string name="description">Descripción:</string>
 </resources>
