@@ -33,7 +33,7 @@
             android:id="@+id/tvleftParagraph"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            tools:text="AAAAAA asdfsdk kjkjk lk klkjl ljkj lkjlkj lkkj lkj uy iuy iuy i iuy  fgfdfdsf sdfdsfsdfdd dfdsfkjjlkj kljljkj"
+            android:text="AAAAAA asdfsdk kjkjk lk klkjl ljkj lkjlkj lkkj lkj uy iuy iuy i iuy  fgfdfdsf sdfdsfsdfdd dfdsfkjjlkj kljljkj"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@id/tvTitle"
@@ -43,7 +43,7 @@
             android:id="@+id/tvRightParagraph"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            tools:text="asdasdsa asd kklj lkasd adad asdas jlk"
+            android:text="asdasdsa asd kklj lkasd adad asdas jlk"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toRightOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@id/tvTitle"
@@ -76,7 +76,6 @@
             app:layout_constraintEnd_toEndOf="@id/imgLabyrinth"
             app:layout_constraintTop_toBottomOf="@id/imgLabyrinth"
             android:orientation="vertical">
-
             <include layout="@layout/item_box"/>
         </LinearLayout>
 
@@ -84,13 +83,40 @@
             android:id="@+id/viewPager"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/item_user"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linearLayout"/>
+            app:layout_constraintTop_toBottomOf="@id/linearLayout" />
 
+
+        <TextView
+            android:id="@+id/tvLeftEnd"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="dasda asdasdsad adasdsadsada dadasdas dadsasda sdasdasd sdsad asdasd adas"
+            android:layout_marginTop="@dimen/commonMargin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvCenterEnd"
+            app:layout_constraintTop_toBottomOf="@id/viewPager" />
+
+        <TextView
+            android:id="@+id/tvCenterEnd"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="dasda asdasdsad adasdsadsada dadasdas dadsasda sdasdasd sdsad asdasd adas"
+            android:layout_marginTop="@dimen/commonMargin"
+            app:layout_constraintStart_toEndOf="@id/tvLeftEnd"
+            app:layout_constraintEnd_toStartOf="@id/tvRightEnd"
+            app:layout_constraintTop_toBottomOf="@id/viewPager" />
+
+        <TextView
+            android:id="@+id/tvRightEnd"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="dasda asdasdsad adasdsadsada dadasdas dadsasda sdasdasd sdsad asdasd adas"
+            android:layout_marginTop="@dimen/commonMargin"
+            app:layout_constraintStart_toEndOf="@id/tvCenterEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewPager" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </androidx.core.widget.NestedScrollView>
