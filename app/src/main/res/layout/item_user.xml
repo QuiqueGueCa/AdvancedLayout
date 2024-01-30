@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@drawable/shape_user"
     android:padding="@dimen/commonMargin"
+    android:layout_margin="@dimen/commonMargin"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tool="http://schemas.android.com/tools">
 
@@ -25,7 +26,8 @@
         android:textStyle="bold"
         android:layout_marginHorizontal="@dimen/commonMargin"
         app:layout_constraintStart_toEndOf="@id/imgUser"
-        app:layout_constraintTop_toTopOf="@id/imgUser" />
+        app:layout_constraintTop_toTopOf="@id/imgUser"
+        app:layout_constraintBottom_toTopOf="@id/tvSex" />
 
     <TextView
         android:id="@+id/tvSex"
@@ -36,7 +38,7 @@
         android:layout_marginHorizontal="@dimen/commonMargin"
         app:layout_constraintStart_toEndOf="@id/imgUser"
         app:layout_constraintTop_toBottomOf="@id/tvAge"
-        app:layout_constraintBottom_toTopOf="@id/tvHobby" />
+        app:layout_constraintBottom_toBottomOf="@id/imgUser" />
 
     <TextView
         android:id="@+id/tvHobby"
@@ -44,23 +46,18 @@
         android:layout_height="wrap_content"
         android:text="@string/hobbies"
         android:textStyle="bold"
-        android:layout_marginHorizontal="@dimen/commonMargin"
-        app:layout_constraintStart_toEndOf="@id/imgUser"
-        app:layout_constraintBottom_toBottomOf="@id/imgUser" />
+        android:layout_marginTop="@dimen/minMargin"
+        app:layout_constraintStart_toStartOf="@id/imgUser"
+        app:layout_constraintTop_toBottomOf="@id/imgUser" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.4" />
 
     <TextView
         android:id="@+id/tvAgeContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tool:text="18"
-        app:layout_constraintLeft_toRightOf="@id/guideline"
+        android:layout_marginStart="@dimen/minMargin"
+        app:layout_constraintLeft_toRightOf="@id/tvAge"
         app:layout_constraintTop_toTopOf="@id/tvAge" />
 
     <TextView
@@ -68,7 +65,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tool:text="Hombre"
-        app:layout_constraintLeft_toRightOf="@id/guideline"
+        android:layout_marginStart="@dimen/minMargin"
+        app:layout_constraintLeft_toRightOf="@id/tvSex"
         app:layout_constraintTop_toTopOf="@id/tvSex" />
 
     <TextView
@@ -76,10 +74,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         tool:text="Cazar orcos y discutir con Elrond asdsa asdasd asdsa asdas asdasd asd "
-        android:layout_marginEnd="@dimen/commonMargin"
-        app:layout_constraintLeft_toRightOf="@id/guideline"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvHobby" />
+        android:layout_marginEnd="@dimen/minMargin"
+        app:layout_constraintStart_toStartOf="@id/imgUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHobby" />
 
     <View
         android:layout_width="match_parent"
@@ -96,7 +94,7 @@
         android:layout_height="wrap_content"
         android:text="@string/description"
         android:textStyle="bold"
-        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginTop="@dimen/commonMargin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvHobbyContent" />
 
@@ -105,9 +103,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         tool:text="Aragorn, hijo de Arathorn, heredero al trono de Isildur."
-        android:layout_marginHorizontal="@dimen/commonMargin"
-        app:layout_constraintStart_toEndOf="@id/tvDescription"
+        android:layout_marginTop="@dimen/minMargin"
+        app:layout_constraintStart_toStartOf="@id/tvDescription"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvDescription" />
+        app:layout_constraintTop_toBottomOf="@id/tvDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
