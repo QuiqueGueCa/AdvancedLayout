@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AdvancedLayout</string>
     <string name="title">Título</string>
+    <string name="imgExplanation">Imagen de laberinto</string>
 </resources>

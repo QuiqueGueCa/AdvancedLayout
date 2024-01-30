@@ -33,7 +33,7 @@
             android:id="@+id/tvleftParagraph"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="AAAAAA asdfsdk kjkjk lk klkjlkjjlkj kljljkj"
+            android:text="AAAAAA asdfsdk kjkjk lk klkjl ljkj lkjlkj lkkj lkj uy iuy iuy i iuy  fgfdfdsf sdfdsfsdfdd dfdsfkjjlkj kljljkj"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@id/tvTitle"
@@ -62,8 +62,33 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:src="@drawable/labyrinth"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/imgExplanation"
             app:layout_constraintTop_toBottomOf="@id/barrier"
             android:layout_margin="@dimen/commonMargin"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/commonMargin"
+            app:layout_constraintStart_toStartOf="@id/imgLabyrinth"
+            app:layout_constraintEnd_toEndOf="@id/imgLabyrinth"
+            app:layout_constraintTop_toBottomOf="@id/imgLabyrinth"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_box"/>
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout"/>
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
