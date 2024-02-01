@@ -36,4 +36,9 @@ class UsersPagerAdapter(
     }
 
     override fun getItemCount(): Int = users.size
+
+    fun updateUsers(users: MutableList<User>) {
+        this.users = users
+        notifyDataSetChanged()
+    }
 }
