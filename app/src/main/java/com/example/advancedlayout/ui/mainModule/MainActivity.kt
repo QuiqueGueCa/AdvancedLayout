@@ -12,7 +12,6 @@ import com.example.advancedlayout.databinding.ActivityMainBinding
 import com.example.advancedlayout.databinding.ItemBoxBinding
 import com.example.advancedlayout.model.User
 import com.example.advancedlayout.model.Weapon
-import com.example.advancedlayout.ui.mainModule.adapter.HorizontalMarginItemDecoration
 import com.example.advancedlayout.ui.mainModule.adapter.UsersPagerAdapter
 
 
@@ -32,11 +31,21 @@ class MainActivity : AppCompatActivity() {
         setupViewModel()
 
         setupViewPager()
+
+        with(binding) {
+            btnLeft.setOnClickListener { mViewModel.setLeftParagraph() }
+            btnRight.setOnClickListener { mViewModel.setRightParagraph() }
+            btnList.setOnClickListener {
+                linearLayout.removeAllViews()
+                mViewModel.changeList()
+            }
+        }
     }
 
     @SuppressLint("NotifyDataSetChanged")
     private fun setupViewModel() {
         mViewModel = ViewModelProvider(this)[MainViewModel::class.java]
+
         mViewModel.leftParagraph.observe(this) { binding.tvleftParagraph.text = it }
         mViewModel.rightParagraph.observe(this) { binding.tvRightParagraph.text = it }
         mViewModel.users.observe(this) {
@@ -49,6 +58,7 @@ class MainActivity : AppCompatActivity() {
             mWeapons.addAll(it)
             setupList()
         }
+
     }
 
     @SuppressLint("SetTextI18n")
@@ -58,12 +68,13 @@ class MainActivity : AppCompatActivity() {
             binding.linearLayout.addView(itemBinding.root)
             val param = itemBinding.root.layoutParams as ViewGroup.MarginLayoutParams
             param.setMargins(0, 16, 0, 16)
-            itemBinding.root.layoutParams = param
-            itemBinding.tvTxt.text = weapon.txt
-            itemBinding.tvPrice.text =
-                weapon.price.toString().substring(
-                    0, weapon.price.toString().length - 2
-                ) + "€"
+
+            with(itemBinding) {
+                root.layoutParams = param
+                tvTxt.text = weapon.txt
+                tvPrice.text = weapon.price.toString()
+                    .substring(0, weapon.price.toString().indexOf(".") + 3) + "€"
+            }
         }
     }
 

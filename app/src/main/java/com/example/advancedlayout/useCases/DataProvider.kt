@@ -3,78 +3,74 @@ package com.example.advancedlayout.useCases
 import com.example.advancedlayout.R
 import com.example.advancedlayout.model.User
 import com.example.advancedlayout.model.Weapon
+import com.example.advancedlayout.utils.Constants
+import com.example.advancedlayout.utils.RandomsGenerator
 import kotlin.random.Random
 
 class DataProvider {
-    private val SPACE_ASCII_VALUE = 32
-
-    fun getRandomParagraph(minLength: Int, maxLength: Int): String {
-        var spaceCounter = 0
-        val paragraphLength = Random.nextInt(minLength, maxLength)
-        var paragraph = ""
-
-        for (i in 1..paragraphLength) {
-
-            val asciiNum = checkMustSpace(spaceCounter)
-
-            paragraph += asciiNum.toChar()
-
-            if (asciiNum == SPACE_ASCII_VALUE) {
-                spaceCounter = 0
-            } else {
-                spaceCounter++
-            }
-        }
-        return paragraph
-    }
-
-    private fun checkMustSpace(spaceCounter: Int): Int {
-        val maxLettersInWord = 8
-
-        return if (spaceCounter < maxLettersInWord) {
-            Random.nextInt(32, 122)
-        } else {
-            SPACE_ASCII_VALUE
-        }
-    }
 
     fun getUsersList(): MutableList<User> = mutableListOf(
         User(
             R.drawable.aragorn,
             87,
             "hombre",
-            getRandomParagraph(10, 25),
-            getRandomParagraph(10, 120)
+            RandomsGenerator.getRandomParagraph(
+                Constants.MIN_ITEMS_LENGTH, Constants.MAX_ITEMS_LENGTH
+            ),
+            RandomsGenerator.getRandomParagraph(
+                Constants.MIN_ITEMS_LENGTH, Constants.MAX_ITEMS_LENGTH
+            )
         ),
         User(
             R.drawable.legolas,
             2931,
             "hombre",
-            getRandomParagraph(10, 25),
-            getRandomParagraph(10, 120)
+            RandomsGenerator.getRandomParagraph(
+                Constants.MIN_ITEMS_LENGTH, Constants.MAX_ITEMS_LENGTH
+            ),
+            RandomsGenerator.getRandomParagraph(
+                Constants.MIN_ITEMS_LENGTH, Constants.MAX_ITEMS_LENGTH
+            )
         ),
         User(
             R.drawable.gimli,
             139,
             "hombre",
-            getRandomParagraph(10, 25),
-            getRandomParagraph(10, 120)
+            RandomsGenerator.getRandomParagraph(
+                Constants.MIN_ITEMS_LENGTH, Constants.MAX_ITEMS_LENGTH
+            ),
+            RandomsGenerator.getRandomParagraph(
+                Constants.MIN_ITEMS_LENGTH, Constants.MAX_ITEMS_LENGTH
+            )
         ),
         User(
             R.drawable.sauron,
             999999,
             "hombre",
-            getRandomParagraph(10, 25),
-            getRandomParagraph(10, 120)
+            RandomsGenerator.getRandomParagraph(
+                Constants.MIN_ITEMS_LENGTH, Constants.MAX_ITEMS_LENGTH
+            ),
+            RandomsGenerator.getRandomParagraph(
+                Constants.MIN_ITEMS_LENGTH, Constants.MAX_ITEMS_LENGTH
+            )
         )
     )
 
     fun getWeaponsList(): MutableList<Weapon> {
         val weapons = mutableListOf<Weapon>()
-        val itemsQuantity = Random.nextInt(3, 11)
+        val itemsQuantity = Random.nextInt(
+            Constants.MIN_ITEMS_LIST, Constants.MAX_ITEMS_LIST
+        )
 
         for (i in 0..itemsQuantity) {
-            weapons.add(Weapon(getRandomParagraph(10, 120), 12.2222f))
+            weapons.add(
+                Weapon(
+                    RandomsGenerator.getRandomParagraph(
+                        Constants.MIN_ITEMS_LENGTH, Constants.MAX_ITEMS_LENGTH
+                    ),
+                    Random.nextFloat() * 100
+                )
+            )
         }
         return weapons
     }

@@ -101,7 +101,7 @@
             app:layout_constraintStart_toStartOf="@id/imgLabyrinth"
             app:layout_constraintEnd_toEndOf="@id/imgLabyrinth"
             app:layout_constraintTop_toBottomOf="@id/btnList"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPager"
