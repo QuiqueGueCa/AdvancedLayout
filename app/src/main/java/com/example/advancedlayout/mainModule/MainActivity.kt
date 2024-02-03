@@ -1,4 +1,4 @@
-package com.example.advancedlayout
+package com.example.advancedlayout.mainModule
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
-import com.example.advancedlayout.adapter.HorizontalMarginItemDecoration
-import com.example.advancedlayout.adapter.UsersPagerAdapter
+import com.example.advancedlayout.R
 import com.example.advancedlayout.data.User
 import com.example.advancedlayout.data.Weapon
 import com.example.advancedlayout.databinding.ActivityMainBinding
 import com.example.advancedlayout.databinding.ItemBoxBinding
-import com.example.advancedlayout.viewModel.MainViewModel
+import com.example.advancedlayout.mainModule.adapter.HorizontalMarginItemDecoration
+import com.example.advancedlayout.mainModule.adapter.UsersPagerAdapter
 
 
 class MainActivity : AppCompatActivity() {

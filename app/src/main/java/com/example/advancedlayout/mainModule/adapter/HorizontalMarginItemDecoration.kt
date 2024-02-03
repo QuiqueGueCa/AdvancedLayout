@@ -1,4 +1,4 @@
-package com.example.advancedlayout.adapter
+package com.example.advancedlayout.mainModule.adapter
 
 import android.content.Context
 import android.graphics.Rect

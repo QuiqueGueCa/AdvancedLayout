@@ -1,15 +1,15 @@
-package com.example.advancedlayout.viewModel
+package com.example.advancedlayout.mainModule
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.advancedlayout.data.User
 import com.example.advancedlayout.data.Weapon
-import com.example.advancedlayout.model.MainInteractor
+import com.example.advancedlayout.useCases.DataProvider
 
 class MainViewModel : ViewModel() {
 
-    private val interactor = MainInteractor()
+    private val interactor = DataProvider()
     private val _leftParagraph = MutableLiveData<String>()
     private val _rightParagraph = MutableLiveData<String>()
     private val _users = MutableLiveData<MutableList<User>>()

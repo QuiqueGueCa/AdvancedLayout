@@ -1,11 +1,11 @@
-package com.example.advancedlayout.model
+package com.example.advancedlayout.useCases
 
 import com.example.advancedlayout.R
 import com.example.advancedlayout.data.User
 import com.example.advancedlayout.data.Weapon
 import kotlin.random.Random
 
-class MainInteractor {
+class DataProvider {
     private val SPACE_ASCII_VALUE = 32
 
     fun getRandomParagraph(minLength: Int, maxLength: Int): String {
