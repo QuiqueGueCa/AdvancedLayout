@@ -1,10 +1,10 @@
-package com.example.advancedlayout.mainModule
+package com.example.advancedlayout.ui.mainModule
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.advancedlayout.data.User
-import com.example.advancedlayout.data.Weapon
+import com.example.advancedlayout.model.User
+import com.example.advancedlayout.model.Weapon
 import com.example.advancedlayout.useCases.DataProvider
 
 class MainViewModel : ViewModel() {

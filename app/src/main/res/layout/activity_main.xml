@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mainModule.MainActivity"
+    tools:context=".ui.mainModule.MainActivity"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,14 +20,23 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginVertical="@dimen/commonMargin"/>
+            android:layout_marginVertical="@dimen/commonMargin" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.5"/>
+            app:layout_constraintGuide_percent="0.5" />
+
+        <Button
+            android:id="@+id/btnLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/randomize"
+            app:layout_constraintStart_toStartOf="@id/tvleftParagraph"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            android:layout_marginVertical="@dimen/commonMargin" />
 
         <TextView
             android:id="@+id/tvleftParagraph"
@@ -35,8 +44,17 @@
             android:layout_height="wrap_content"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/btnLeft"
+            android:layout_margin="@dimen/commonMargin" />
+
+        <Button
+            android:id="@+id/btnRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/randomize"
+            app:layout_constraintStart_toStartOf="@id/tvRightParagraph"
             app:layout_constraintTop_toBottomOf="@id/tvTitle"
-            android:layout_margin="@dimen/commonMargin"/>
+            android:layout_marginVertical="@dimen/commonMargin" />
 
         <TextView
             android:id="@+id/tvRightParagraph"
@@ -44,8 +62,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toRightOf="@id/guideline"
-            app:layout_constraintTop_toBottomOf="@id/tvTitle"
-            android:layout_margin="@dimen/commonMargin"/>
+            app:layout_constraintTop_toBottomOf="@id/btnRight"
+            android:layout_margin="@dimen/commonMargin" />
         
         <androidx.constraintlayout.widget.Barrier
             android:id="@+id/barrier"
@@ -63,7 +81,17 @@
             android:scaleType="fitXY"
             android:contentDescription="@string/imgExplanation"
             app:layout_constraintTop_toBottomOf="@id/barrier"
-            android:layout_margin="@dimen/commonMargin"/>
+            android:layout_margin="@dimen/commonMargin" />
+
+        <Button
+            android:id="@+id/btnList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/randomize"
+            android:layout_marginTop="@dimen/commonMargin"
+            app:layout_constraintStart_toStartOf="@id/imgLabyrinth"
+            app:layout_constraintEnd_toEndOf="@id/imgLabyrinth"
+            app:layout_constraintTop_toBottomOf="@id/imgLabyrinth" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -72,9 +100,8 @@
             android:layout_margin="@dimen/commonMargin"
             app:layout_constraintStart_toStartOf="@id/imgLabyrinth"
             app:layout_constraintEnd_toEndOf="@id/imgLabyrinth"
-            app:layout_constraintTop_toBottomOf="@id/imgLabyrinth"
-            android:orientation="vertical">
-        </LinearLayout>
+            app:layout_constraintTop_toBottomOf="@id/btnList"
+            android:orientation="vertical"></LinearLayout>
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPager"

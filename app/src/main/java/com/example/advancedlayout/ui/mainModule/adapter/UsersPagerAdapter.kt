@@ -1,4 +1,4 @@
-package com.example.advancedlayout.mainModule.adapter
+package com.example.advancedlayout.ui.mainModule.adapter
 
 
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.advancedlayout.R
-import com.example.advancedlayout.data.User
 import com.example.advancedlayout.databinding.ItemUserBinding
+import com.example.advancedlayout.model.User
 
 class UsersPagerAdapter(
     private var users: MutableList<User>

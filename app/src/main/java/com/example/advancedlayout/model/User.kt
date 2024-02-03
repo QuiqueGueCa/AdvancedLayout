@@ -1,4 +1,4 @@
-package com.example.advancedlayout.data
+package com.example.advancedlayout.model
 
 class User(
     val img: Int,

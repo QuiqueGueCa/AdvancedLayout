@@ -1,8 +1,8 @@
 package com.example.advancedlayout.useCases
 
 import com.example.advancedlayout.R
-import com.example.advancedlayout.data.User
-import com.example.advancedlayout.data.Weapon
+import com.example.advancedlayout.model.User
+import com.example.advancedlayout.model.Weapon
 import kotlin.random.Random
 
 class DataProvider {
