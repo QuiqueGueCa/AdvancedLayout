@@ -5,7 +5,7 @@ import com.example.advancedlayout.data.User
 import com.example.advancedlayout.data.Weapon
 import kotlin.random.Random
 
-class MainInteractor() {
+class MainInteractor {
     private val SPACE_ASCII_VALUE = 32
 
     fun getRandomParagraph(minLength: Int, maxLength: Int): String {
@@ -31,10 +31,10 @@ class MainInteractor() {
     private fun checkMustSpace(spaceCounter: Int): Int {
         val maxLettersInWord = 8
 
-        if (spaceCounter < maxLettersInWord) {
-            return Random.nextInt(32, 122)
+        return if (spaceCounter < maxLettersInWord) {
+            Random.nextInt(32, 122)
         } else {
-            return SPACE_ASCII_VALUE
+            SPACE_ASCII_VALUE
         }
     }
 
@@ -43,29 +43,29 @@ class MainInteractor() {
             R.drawable.aragorn,
             87,
             "hombre",
-            "Liderar ejércitos",
-            "Aragorn, hijo de Arathorn, heredero de Isildur"
+            getRandomParagraph(10, 25),
+            getRandomParagraph(10, 120)
         ),
         User(
             R.drawable.legolas,
             2931,
             "hombre",
-            "Tocar la flauta",
-            "Un elfo arquero como todos"
+            getRandomParagraph(10, 25),
+            getRandomParagraph(10, 120)
         ),
         User(
             R.drawable.gimli,
             139,
             "hombre",
-            "Ir a la mina",
-            "El estereotipo de enano clásico"
+            getRandomParagraph(10, 25),
+            getRandomParagraph(10, 120)
         ),
         User(
             R.drawable.sauron,
             999999,
             "hombre",
-            "Coleccionar anillos",
-            "Un ser horrible y maligno"
+            getRandomParagraph(10, 25),
+            getRandomParagraph(10, 120)
         )
     )
 
