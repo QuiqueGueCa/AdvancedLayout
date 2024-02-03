@@ -6,5 +6,4 @@ class User(
     val sex: String,
     val hobbies: String,
     val description: String
-) {
-}
+)

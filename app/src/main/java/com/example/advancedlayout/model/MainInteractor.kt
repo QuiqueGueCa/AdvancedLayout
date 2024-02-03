@@ -2,6 +2,7 @@ package com.example.advancedlayout.model
 
 import com.example.advancedlayout.R
 import com.example.advancedlayout.data.User
+import com.example.advancedlayout.data.Weapon
 import kotlin.random.Random
 
 class MainInteractor() {
@@ -42,29 +43,39 @@ class MainInteractor() {
             R.drawable.aragorn,
             87,
             "hombre",
-            "Liderar ejércitos, perderse por el bosque",
+            "Liderar ejércitos",
             "Aragorn, hijo de Arathorn, heredero de Isildur"
         ),
         User(
             R.drawable.legolas,
             2931,
             "hombre",
-            "Dar paseos por el campo, tocar la flauta",
+            "Tocar la flauta",
             "Un elfo arquero como todos"
         ),
         User(
             R.drawable.gimli,
             139,
             "hombre",
-            "Ir a la mina, atusarse la barba",
+            "Ir a la mina",
             "El estereotipo de enano clásico"
         ),
         User(
             R.drawable.sauron,
             999999,
             "hombre",
-            "Hacer cosas malas, hacer cosas muy malas",
+            "Coleccionar anillos",
             "Un ser horrible y maligno"
         )
     )
+
+    fun getWeaponsList(): MutableList<Weapon> {
+        val weapons = mutableListOf<Weapon>()
+        val itemsQuantity = Random.nextInt(3, 11)
+
+        for (i in 0..itemsQuantity) {
+            weapons.add(Weapon(getRandomParagraph(10, 120), 12.2222f))
+        }
+        return weapons
+    }
 }

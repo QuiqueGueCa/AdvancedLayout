@@ -32,13 +32,7 @@ class UsersPagerAdapter(
             tvHobbyContent.text = users[position].hobbies
             tvDescriptionContent.text = users[position].description
         }
-
     }
 
     override fun getItemCount(): Int = users.size
-
-    fun updateUsers(users: MutableList<User>) {
-        this.users = users
-        notifyDataSetChanged()
-    }
 }

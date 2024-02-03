@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/black"
-    android:layout_marginVertical="@dimen/minMargin"
+    android:layout_marginVertical="@dimen/commonMargin"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
@@ -20,9 +20,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:maxLines="1"
-        android:text="asdasd sad"
         android:textColor="@color/white"
-        android:layout_marginHorizontal="@dimen/commonMargin"
+        android:layout_marginStart="@dimen/commonMargin"
         app:layout_constraintStart_toEndOf="@id/imgCastle"
         app:layout_constraintEnd_toStartOf="@id/tvPrice"
         app:layout_constraintTop_toTopOf="@id/imgCastle"

@@ -33,7 +33,6 @@
             android:id="@+id/tvleftParagraph"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="AAAAAA asdfsdk kjkjk lk klkjl ljkj lkjlkj lkkj lkj uy iuy iuy i iuy  fgfdfdsf sdfdsfsdfdd dfdsfkjjlkj kljljkj"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@id/tvTitle"
@@ -43,7 +42,6 @@
             android:id="@+id/tvRightParagraph"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="asdasdsa asd kklj lkasd adad asdas jlk"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toRightOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@id/tvTitle"
@@ -61,7 +59,7 @@
             android:id="@+id/imgLabyrinth"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/labyrinth"
+            android:src="@drawable/dungeon"
             android:scaleType="fitXY"
             android:contentDescription="@string/imgExplanation"
             app:layout_constraintTop_toBottomOf="@id/barrier"
@@ -76,7 +74,6 @@
             app:layout_constraintEnd_toEndOf="@id/imgLabyrinth"
             app:layout_constraintTop_toBottomOf="@id/imgLabyrinth"
             android:orientation="vertical">
-            <include layout="@layout/item_box"/>
         </LinearLayout>
 
         <androidx.viewpager2.widget.ViewPager2
