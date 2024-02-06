@@ -1,5 +1,6 @@
-package com.example.advancedlayout.utils
+package com.example.advancedlayout.data.utils
 
+import com.example.advancedlayout.data.constants.Constants
 import kotlin.random.Random
 
 object RandomsGenerator {

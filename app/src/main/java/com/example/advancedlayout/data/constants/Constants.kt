@@ -1,4 +1,4 @@
-package com.example.advancedlayout.utils
+package com.example.advancedlayout.data.constants
 
 object Constants {
     const val SPACE_ASCII_VALUE = 32
@@ -11,5 +11,4 @@ object Constants {
     const val MAX_ITEMS_LIST = 11
     const val MIN_ITEMS_LENGTH = 10
     const val MAX_ITEMS_LENGTH = 121
-
 }

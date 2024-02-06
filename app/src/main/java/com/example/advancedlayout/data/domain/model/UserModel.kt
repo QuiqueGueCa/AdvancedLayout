@@ -1,6 +1,6 @@
-package com.example.advancedlayout.model
+package com.example.advancedlayout.data.domain.model
 
-class User(
+data class UserModel(
     val img: Int,
     val age: Int,
     val sex: String,

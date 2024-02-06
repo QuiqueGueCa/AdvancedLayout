@@ -8,10 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.example.advancedlayout.R
+import com.example.advancedlayout.data.domain.model.UserModel
+import com.example.advancedlayout.data.domain.model.WeaponModel
 import com.example.advancedlayout.databinding.ActivityMainBinding
 import com.example.advancedlayout.databinding.ItemBoxBinding
-import com.example.advancedlayout.model.User
-import com.example.advancedlayout.model.Weapon
 import com.example.advancedlayout.ui.mainModule.adapter.UsersPagerAdapter
 
 
@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var mViewModel: MainViewModel
     private lateinit var mAdapter: UsersPagerAdapter
-    private var mUsers = mutableListOf<User>()
-    private var mWeapons = mutableListOf<Weapon>()
+    private var mUsers = mutableListOf<UserModel>()
+    private var mWeapons = mutableListOf<WeaponModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
